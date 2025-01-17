@@ -8,10 +8,15 @@ ballroom = Room()
 ballroom.set_name("ballroom")
 ballroom.set_description("A vast room with a shiny wooden floor")
 
-dining_room = Room()
-dining_room.set_name("dining hall")
-dining_room.set_description("A large room with ornate golden decorations")
+dining_hall = Room()
+dining_hall.set_name("dining hall")
+dining_hall.set_description("A large room with ornate golden decorations")
 
+
+kitchen.link_room(dining_hall, "south")
+dining_hall.link_room(kitchen, "north")
+dining_hall.link_room(ballroom, "west")
+ballroom.link_room(dining_hall, "east")
 
 print(kitchen.name)
 kitchen.describe()
@@ -19,5 +24,5 @@ kitchen.describe()
 print(ballroom.name)
 ballroom.describe()
 
-print(dining_room.name)
-dining_room.describe()
+print(dining_hall.name)
+dining_hall.describe()
