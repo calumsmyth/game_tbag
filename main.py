@@ -18,11 +18,5 @@ dining_hall.link_room(kitchen, "north")
 dining_hall.link_room(ballroom, "west")
 ballroom.link_room(dining_hall, "east")
 
-print(kitchen.name)
-kitchen.describe()
 
-print(ballroom.name)
-ballroom.describe()
-
-print(dining_hall.name)
-dining_hall.describe()
+dining_hall.get_details()
