@@ -42,3 +42,4 @@ class Enemy(Character):
         else:
             print(self.name + " crushes you, puny adventurer")
             return False
+        

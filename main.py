@@ -35,5 +35,22 @@ while True:
         inhabitant.describe()
 
     command = input("> ")
-    current_room = current_room.move(command)
-    
+
+    if command in ["north", "south", "east", "west"]:
+        current_room = current_room.move(command)
+    elif command == "talk":
+        if inhabitant:
+            inhabitant.talk()
+        else:
+            print("You are in the room alone.")
+    elif command == "fight":
+        if inhabitant:
+            print("What will you fight with?")
+            fight_with = input()
+            
+            fight_result = inhabitant.fight(fight_with)
+            if fight_result == False:
+                print("Game Over")
+                break
+        else:
+            print("There is no one in the room to fight.")
