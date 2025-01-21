@@ -59,3 +59,24 @@ class Enemy(Character):
         else:
             print(self.name + " has no interest in the " + bribe_item + ". " + self.name + " didn't like your attempt to bribe them. They make sure you can never try to bribe anyone ever again!")
             return False
+    def gift(self, gift_item):
+        self.gift_item = gift_item
+        print(self.name + " doesn't want any gifts.")
+
+
+class Friend(Character):
+    def __init__(self, char_name, char_description):
+        super(). __init__ (char_name, char_description)
+
+    def set_gift_item(self, gift_item):
+        self.gift_item = gift_item
+
+    def get_gift_item(self):
+        return self.gift_item
+    
+    def gift(self, give_gift):
+        if give_gift == self.gift_item:
+            print(self.name + " accepts your " + give_gift + " with a big smile.")
+        else:
+            print(self.name + " politely declines your " + give_gift + ".")
+

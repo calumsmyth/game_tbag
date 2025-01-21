@@ -1,5 +1,5 @@
 from room import Room
-from character import Enemy, Character
+from character import Enemy, Character, Friend
 
 kitchen = Room()
 kitchen.set_name("kitchen")
@@ -25,8 +25,9 @@ dave.set_weakness("cheese")
 dave.set_favourite("brains")
 dining_hall.set_character(dave)
 
-jade = Character("Jade", "A young woman in a flowing red ballgown")
+jade = Friend("Jade", "A young woman in a flowing green ballgown")
 jade.set_conversation("I am waiting for my dance partner to arrive, but there's a strange man in the ballroom.")
+jade.set_gift_item("necklace")
 kitchen.set_character(jade)
 
 
@@ -65,6 +66,12 @@ while True:
                 break
         else:
             print("There is no one to bribe in the room.")
+    elif command == "gift":
+        if Friend:
+            print("What will you give?")
+            give_item = input()
+            give_result = inhabitant.gift(give_item)
+    
     elif command == "fight":
         if inhabitant:
             print("What will you fight with?")
