@@ -22,6 +22,7 @@ ballroom.link_room(dining_hall, "east")
 dave = Enemy("Dave", "A smelly zombie")
 dave.set_conversation("Brrlgrh... rgrhl... brains...")
 dave.set_weakness("cheese")
+dave.set_favourite("brains")
 dining_hall.set_character(dave)
 
 jade = Character("Jade", "A young woman in a flowing red ballgown")
@@ -32,6 +33,7 @@ kitchen.set_character(jade)
 dr_acular = Enemy("Dr. Acular", "A tall, slender and very pale man with two very pointed teeth and a long black jacket. There's a red stain on the collar of his white shirt.")
 dr_acular.set_conversation("Looks like dinner is served!")
 dr_acular.set_weakness("stake")
+dr_acular.set_favourite("blood")
 ballroom.set_character(dr_acular)
 
 
@@ -53,6 +55,13 @@ while True:
             inhabitant.talk()
         else:
             print("You are in the room alone.")
+    elif command == "bribe":
+        if inhabitant:
+            print("How will you bribe them?")
+            bribe_with = input()
+            bribe_result = inhabitant.bribe(bribe_with)
+        else:
+            print("There is no one to bribe in the room.")
     elif command == "fight":
         if inhabitant:
             print("What will you fight with?")

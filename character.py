@@ -21,6 +21,10 @@ class Character():
         print(self.name + " doesn't want to fight with you")
         return True
     
+    def bribe(self, bribe_item):
+        print(self.name + " can't be bribed.")
+        return True
+    
 
 
     
@@ -42,4 +46,16 @@ class Enemy(Character):
         else:
             print(self.name + " crushes you, puny adventurer")
             return False
-        
+    def set_favourite(self, favourite_item):
+        self.favourite = favourite_item
+
+    def get_favourite(self):
+        return self.favourite 
+    
+    def bribe(self, bribe_item):
+        if bribe_item == self.favourite:
+            print("You bribe " + self.name + " with the " + bribe_item)
+            return True
+        else:
+            print(self.name + " has no interest in the " + bribe_item)
+            return True
