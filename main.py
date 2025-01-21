@@ -24,6 +24,13 @@ dave.set_conversation("Brrlgrh... rgrhl... brains...")
 dave.set_weakness("cheese")
 dining_hall.set_character(dave)
 
+jade = Character("Jade", "A young woman in a flowing red ballgown")
+jade.set_conversation("I am waiting for my dance partner to arrive.")
+jade.talk()
+ballroom.set_character(jade)
+
+
+
 
 current_room = kitchen
 while True:
