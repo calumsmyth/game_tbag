@@ -25,11 +25,14 @@ dave.set_weakness("cheese")
 dining_hall.set_character(dave)
 
 jade = Character("Jade", "A young woman in a flowing red ballgown")
-jade.set_conversation("I am waiting for my dance partner to arrive.")
-jade.talk()
-ballroom.set_character(jade)
+jade.set_conversation("I am waiting for my dance partner to arrive, but there's a strange man in the ballroom.")
+kitchen.set_character(jade)
 
 
+dr_acular = Enemy("Dr. Acular", "A tall, slender and very pale man with two very pointed teeth and a long black jacket. There's a red stain on the collar of his white shirt.")
+dr_acular.set_conversation("Looks like dinner is served!")
+dr_acular.set_weakness("stake")
+ballroom.set_character(dr_acular)
 
 
 current_room = kitchen
