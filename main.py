@@ -60,13 +60,15 @@ while True:
             print("How will you bribe them?")
             bribe_with = input()
             bribe_result = inhabitant.bribe(bribe_with)
+            if bribe_result == False:
+                print("Game Over")
+                break
         else:
             print("There is no one to bribe in the room.")
     elif command == "fight":
         if inhabitant:
             print("What will you fight with?")
             fight_with = input()
-            
             fight_result = inhabitant.fight(fight_with)
             if fight_result == False:
                 print("Game Over")

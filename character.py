@@ -54,8 +54,8 @@ class Enemy(Character):
     
     def bribe(self, bribe_item):
         if bribe_item == self.favourite:
-            print("You bribe " + self.name + " with the " + bribe_item)
+            print(self.name + " takes the " + bribe_item + " with a smile. They have accepted your bribe.")
             return True
         else:
-            print(self.name + " has no interest in the " + bribe_item)
-            return True
+            print(self.name + " has no interest in the " + bribe_item + ". " + self.name + " didn't like your attempt to bribe them. They make sure you can never try to bribe anyone ever again!")
+            return False
