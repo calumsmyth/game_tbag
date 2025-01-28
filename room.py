@@ -4,6 +4,7 @@ class Room:
         self.description = None
         self.linked_room = {}
         self.character = None
+        self.item = None
         
     def get_description(self):
         return self.description
@@ -30,6 +31,13 @@ class Room:
 
     def get_character(self):
         return self.character
+    
+    def set_item(self, new_item):
+        self.item = new_item
+
+    def get_item(self):
+        return self.item
+
 
     def get_details(self):
         print(self.name)
@@ -45,3 +53,4 @@ class Room:
         else:
             print("You can't go that way")
             return self
+        
