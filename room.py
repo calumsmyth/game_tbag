@@ -37,6 +37,12 @@ class Room:
 
     def get_item(self):
         return self.item
+    
+    def set_objective(self, objective):
+        self.objective = objective
+
+    def get_objective(self):
+        return self.objective
 
 
     def get_details(self):

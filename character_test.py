@@ -14,7 +14,7 @@ print("What will you fight with?")
 fight_with = input()
 dave.fight(fight_with)'''
 
-key = Item()
+'''key = Item()
 key.set_name("ballroom closet key")
 key.set_description("An old rusty key. There is a tag hanging from it with faded writing which seems to say 'Ballroom closet'.")
 
@@ -29,4 +29,4 @@ if kitchen.get_item():
     print("Item in the kitchen is:" + kitchen.get_item().get_name())
     print("Item description is:" + kitchen.get_item().get_description())
 else:
-    print("There is no item in the kitchen")
+    print("There is no item in the kitchen")'''

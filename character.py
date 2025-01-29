@@ -32,6 +32,9 @@ class Character():
         print(self.name + " can't be bribed.")
         return True
     
+    def get_name(self):
+        return self.name
+    
 
 
     
