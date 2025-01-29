@@ -3,23 +3,18 @@ class Character():
         self.name = char_name
         self.description = char_description
         self.conversation = None
-        #self.inventory = []
+        self.inventory = []
     
     def describe(self):
         print(self.name + " is here!")
         print(self.description)
-        '''if self.inventory:
-            print(self.name + " is holding:")
-            for item in self.inventory:
-                print(item.get_name())
 
     def add_item(self, item):
         self.inventory.append(item)
 
     def get_inventory(self):
         return self.inventory
- **THIS SECTION IS FOR CREATING AN INVENTORY, IF DEEMED APPROPRIATE** '''
-    
+
     def set_conversation(self, conversation):
         self.conversation = conversation
 

@@ -49,6 +49,8 @@ key.set_name("Ballroom closet key")
 key.set_description("an old rusty key. There is a tag hanging from it with faded writing which seems to say 'Ballroom closet'")
 kitchen.set_item(key)
 
+#Create 'Player' character
+player = Character("Hero", "This is you, the player, the hero of this story.")
 
 
 
@@ -60,12 +62,6 @@ while True:
     inhabitant = current_room.get_character()
     if inhabitant is not None:
         inhabitant.describe()
-    
-    '''if inhabitant:
-        for item in inhabitant.get_inventory():
-            print(item.get_description())
-
-    **THE ABOVE IS ONLY FOR IF USING AN INVENTORY **     '''
 
     command = input("> ")
 
@@ -106,5 +102,13 @@ while True:
     elif command == "look":
         if current_room.get_item():
             print("In the " + current_room.get_name() + " you see " + current_room.get_item().get_description() + ". It would seem that you have found the " + current_room.get_item().get_name() + ".")
+            player.add_item(current_room.get_item().get_name())
+            print("[GOT ITEM:] " + current_room.get_item().get_name() + " was added to your inventory.")
         else:
             print("There are no useful items in this room.")
+
+    elif command == "inventory":
+        if player.inventory:
+            print(player.inventory)
+        else:
+            print("You currently have no items in your inventory.")
