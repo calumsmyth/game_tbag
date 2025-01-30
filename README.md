@@ -2,7 +2,7 @@ AI-Driven Software Development boot camp project.
 
 Project in writting a texted based adenture game (TBAG).
 
-This is a TBAG where the hero (player) stumbles upon a random inviting castle.
+This is a TBAG where the hero (player) stumbles upon an inviting castle.
 Within the castle the player is able to move between rooms and look around the room.
 Each room contains a character which the player can talk to, bribe, give a gift and fight. 
 Player is also able to check their own inventory and add an item to it by completing a miniquest. 
