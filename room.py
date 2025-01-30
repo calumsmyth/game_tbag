@@ -60,3 +60,11 @@ class Room:
             print("You can't go that way")
             return self
         
+    def start(self):
+        print("\n")
+        print("[Welcome to the TBAG game! Your goal is to navigate the castle and help Jade find her dance partner.]")
+        print("[Navigate through the castle by typing the direction in which the room you want to enter is in ('north', 'east', 'south', 'west'). Do not worry about case sensitivity, we've got you sorted!]")
+        print("[Interact with characters and the rooms by using the following commands: 'talk', 'bribe', 'gift', 'fight', 'look' and 'inventory'].")
+        print("\n")
+        print("You have stumbled upon a grand castle that you have never seen before. The enormous metal door is open and inviting. You can hear jovial music coming from within.")
+        print("[Will you enter? (yes/no)]")

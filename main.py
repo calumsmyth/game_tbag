@@ -57,7 +57,25 @@ player = Character("Hero", "This is you, the player, the hero of this story.")
 
 
 current_room = kitchen
+
+i = True
+while i == True:
+    start = Room()
+    start.start()
+    begin = input("> ").lower()
+    if begin == ("yes"):
+        i == False
+        break
+    else:
+        print("Your nerves get the better of you and you decide to not explore any further. You turn around and walk home. You will forever wonder why the castle seemed so enticing. When you return at a later date, you find the castle has vanished completely.")
+        print("[Game Over!]")
+        exit()
+
+
 while True:
+        
+    print("\n")
+    print("[MOVE to a different room using: 'north', 'east', 'south' or 'west'] [INTERACT with 'talk', 'bribe', 'gift', 'fight', 'look' or 'inventory']")
     print("\n")
     current_room.get_details()
 
@@ -65,7 +83,7 @@ while True:
     if inhabitant is not None:
         inhabitant.describe()
 
-    command = input("> ")
+    command = input("> ").lower()
 
     if command in ["north", "south", "east", "west"]:
         current_room = current_room.move(command)
@@ -77,7 +95,7 @@ while True:
     elif command == "bribe":
         if inhabitant:
             print("How will you bribe them?")
-            bribe_with = input()
+            bribe_with = input().lower()
             bribe_result = inhabitant.bribe(bribe_with)
             if bribe_result == False:
                 print("Game Over")
@@ -87,7 +105,7 @@ while True:
     elif command == "gift":
         if Friend:
             print("What will you give?")
-            give_item = input()
+            give_item = input().lower()
             give_result = inhabitant.gift(give_item)
             if inhabitant.inventory:
                 inventory_item = ", ".join([item.get_name() for item in inhabitant.get_inventory()])
@@ -99,7 +117,7 @@ while True:
     elif command == "fight":
         if inhabitant:
             print("What will you fight with?")
-            fight_with = input()
+            fight_with = input().lower()
             fight_result = inhabitant.fight(fight_with)
             if fight_result == False:
                 print("Game Over")
@@ -118,7 +136,7 @@ while True:
             print("There is a very ornate looking wooden door in the corner. It seems as though it may be even older than the building itself.")
             if player.inventory:
                 print("Would you like to use the key? (yes/no)")
-                use_key = input("> ")
+                use_key = input("> ").lower()
 
                 if use_key == "yes":
                     print("You unlock the closet and find Jade's dance partner, James, tied up inside. You take off his bindings and help him leave the building.")
