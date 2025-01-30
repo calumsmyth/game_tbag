@@ -67,7 +67,7 @@ while i == True:
         i == False
         break
     else:
-        print("Your nerves get the better of you and you decide to not explore any further. You turn around and walk home. You will forever wonder why the castle seemed so enticing. When you return at a later date, you find the castle has vanished completely.")
+        print("Your nerves get the better of you and you decide not to explore any further. You turn around and walk home. You will forever wonder why the castle seemed so enticing. When you return at a later date, you find the castle has vanished completely.")
         print("[Game Over!]")
         exit()
 
